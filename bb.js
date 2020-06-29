@@ -5,4 +5,5 @@ function access() {
   var user_l = user.value.length;
   var pass_l = user.value.length;
 
+  window.open("board.html", "_self");
 }
