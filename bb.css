@@ -1,5 +1,5 @@
 :root {
-  --clr1: #ffe8df;
+  --clr1: #d19fb6;
   --clr2: #ffffff;
   --clr3: #f0f0f0;
   --clr4: #888888;
@@ -17,25 +17,33 @@ body {
   margin: 0;
 }
 
+hr {
+  border-top: 4px dotted var(--clr4);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  width: 20%;
+}
+
 @media (min-width: 425px) {
   body {
     box-sizing: border-box;
     margin: auto;
     max-width: 425px;
   }
-}
 
-.contain {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: 415px) {
   .lg {
     border-left: 2px solid var(--clr4);
     border-right: 2px solid var(--clr4);
   }
+}
+
+.contain {
+  box-sizing: inherit;
+  margin: auto;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
 }
 
 .title {
@@ -50,17 +58,17 @@ body {
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid var(--clr4);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
-#benny {
+.benny {
   box-sizing: inherit;
   height: 90%;
   margin: auto;
   border-radius: 49%;
 }
 
-#title-txt {
+.title-txt {
   box-sizing: inherit;
   width: 90%;
   margin: auto;
@@ -74,18 +82,19 @@ body {
   box-sizing: inherit;
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 60px 60px 56px 20px;
+  grid-template-rows: 60px 60px 71px 25px;
   justify-content: center;
   align-items: center;
   width: 75%;
   height: 250px;
-  margin: auto;
+  margin: 30px auto 0;
   border: 2px solid var(--clr4);
   border-radius: 5%;
   padding: 15px;
 }
 
 #access > label {
+  box-sizing: inherit;
   text-align: right;
   font-family: 'Comfortaa', cursive;
   color: var(--clr5);
@@ -93,6 +102,8 @@ body {
 }
 
 #access > input {
+  box-sizing: inherit;
+  outline: none;
   margin: auto;
   text-align: left;
   width: 75%;
@@ -103,9 +114,13 @@ body {
   border: 2px solid var(--clr4);
   padding: 0 5px;
   font-family: 'Nanum Gothic', sans-serif;
+  font-stretch: normal;
 }
 
 #access > button {
+  box-sizing: inherit;
+  grid-area: 3 / 1 / 3 / 3;
+  outline: none;
   margin: auto;
   text-align: center;
   width: 75px;
@@ -114,6 +129,71 @@ body {
   border: 2px solid var(--clr4);color: var(--clr5);
   border-radius: 10px;
   background-color: var(--clr3);
-  font-size: 18px;
-  grid-area: 3 / 1 / 3 / 3;
+  font-size: 16px;
+  box-shadow: 0 2px var(--clr4);
+}
+
+#resp {
+  box-sizing: inherit;
+  grid-area: 4 / 1 / 4 / 3;
+  height: 25px;
+}
+
+#access > button:active {
+  box-shadow: 0 1px var(--clr4);
+	transform: translateY(2px);
+}
+
+.contentain {
+  box-sizing: inherit;
+  width: 100%;
+}
+
+#instruction {
+  box-sizing: inherit;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: var(--clr5);
+  font-size: 12px;
+  margin: 15px auto;
+}
+
+#name {
+  box-sizing: inherit;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: var(--clr5);
+  font-size: 16px;
+  margin: 5px auto 10px;
+  font-weight: bold;
+}
+
+.group {
+  box-sizing: inherit;
+  width: 95%;
+  margin: 15px auto;
+  border: 1px solid var(--clr1);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.icons {
+  box-sizing: inherit;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.icon {
+  display: inline-block;
+  box-sizing: inherit;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  transition: transform 0.2s;
+}
+
+.icon:active {
+  transform: scale(1.1);
 }

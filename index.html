@@ -15,20 +15,23 @@
     <div class="contain lg">
 
       <div class="title">
-        <img id="benny" src="images/benny.png" alt="Benny">
-        <div id="title-txt">
+        <img class="benny sm" src="images/benny.png" alt="Benny">
+        <div class="title-txt">
           The Benny Board!
         </div>
       </div>
 
       <div id="access">
           <label for="user">Username</label>
-          <input type="text" name="user" maxlength=10>
+          <input id="user-in" type="text" name="user" maxlength=10 required>
           <label for="pass">Password</label>
-          <input type="password" name="pass" maxlength=10>
-          <button name="login">Login</button>
+          <input id="pass-in" type="password" name="pass" maxlength=8 required>
+          <button name="login" onclick="access()">Login</button>
+          <span id="resp"></span>
       </div>
 
     </div>
+
+    <script src="bb.js" charset="utf-8"></script>
   </body>
 </html>
