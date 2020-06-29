@@ -73,11 +73,11 @@ body {
 #access {
   box-sizing: inherit;
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 60px 60px 56px 20px;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 85%;
   height: 250px;
   margin: auto;
   border: 2px solid var(--clr4);
