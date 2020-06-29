@@ -33,7 +33,8 @@ body {
 
 @media (min-width: 415px) {
   .lg {
-    border: 2px solid var(--clr4);
+    border-left: 2px solid var(--clr4);
+    border-right: 2px solid var(--clr4);
   }
 }
 
@@ -81,14 +82,14 @@ body {
   margin: auto;
   border: 2px solid var(--clr4);
   border-radius: 5%;
-  padding: 25px;
+  padding: 15px;
 }
 
 #access > label {
   text-align: right;
   font-family: 'Comfortaa', cursive;
   color: var(--clr5);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #access > input {
@@ -106,6 +107,7 @@ body {
 
 #access > button {
   margin: auto;
+  text-align: center;
   width: 75px;
   height: 40px;
   font-family: 'Comfortaa', cursive;
