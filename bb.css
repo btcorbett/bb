@@ -36,6 +36,13 @@ hr {
     border-left: 2px solid var(--clr4);
     border-right: 2px solid var(--clr4);
   }
+
+  .icon:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-tap-highlight-color: RGBA(0,0,0,0);
+  }
 }
 
 .contain {
@@ -194,13 +201,6 @@ hr {
   transition: transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: -ms-transform 0.2s;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-tap-highlight-color: RGBA(0,0,0,0);
 }
 
 .icon:active {
