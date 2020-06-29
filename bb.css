@@ -189,11 +189,23 @@ hr {
   display: inline-block;
   box-sizing: inherit;
   text-align: center;
-  margin: auto;
-  width: 90%;
+  margin: auto 12.5%;
+  width: 75%;
   transition: transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: -ms-transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-tap-highlight-color: RGBA(0,0,0,0);
 }
 
 .icon:active {
   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-tap-highlight-color: RGBA(0,0,0,0);
 }
