@@ -1,4 +1,4 @@
-const groupArr = ["Greetings", "British", "Compliments", "Love", "Northern"];
+const groupArr = ["Greetings", "British", "Compliments", "Love", "Northern", "Mexican't"];
 
 document.getElementById("groupTxt").innerHTML = groupArr[0];
 
