@@ -208,25 +208,34 @@ hr {
   color: var(--clr5);
   font-size: 20px;
   margin: auto;
-  transition: transform 0.2s;
+  transition: transform 0.25s;
 }
 .slide-l {
   transform: translateX(-175%);
+  -webkit-transform: translateX(-175%);
+  -ms-transform: translateX(-175%);
+  -moz-transform: translateX(-175%);
 }
 
 .slide-r {
   transform: translateX(175%);
+  -webkit-transform: translateX(175%);
+  -ms-transform: translateX(175%);
+  -moz-transform: translateX(175%);
 }
 
 .arrow {
+  box-sizing: inherit;
   display: block;
   height: 95%;
   margin: auto;
+  max-height: 28.5px;
 }
 .arrow:active {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -webkit-tap-highlight-color: RGBA(0,0,0,0);
 }
 
