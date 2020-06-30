@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="bb.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Nanum+Gothic&family=Permanent+Marker&display=swap" rel="stylesheet">
 
-    <title>BennyBoard</title>
+    <title>The Benny Board</title>
 
   </head>
   <body>
-    <div class="contain lg">
 
       <!-- Title -->
 
-      <div class="title">
-        <img class="benny sm" src="images/benny.png" alt="Benny">
+      <div id="title" class="title lg">
+        <p></p>
+        <img class="benny" src="images/benny.png" alt="Benny">
         <div class="title-txt">
           The Benny Board!
         </div>
@@ -25,12 +25,22 @@
 
       <!-- Content -->
 
-      <div class="contentain">
+      <div class="contentain lg">
         <p id="instruction">Use the icons below to hear your favourite phrases!</p>
         <hr>
+        <div class="choose">
+          <select id="groups" class="dl">
+            <option>Greetings</option>
+            <option>British</option>
+            <option>Compliments</option>
+            <option>Love</option>
+            <option>Northern</option>
+            <option>Mexican't</option>
+          </select>
+        </div>
         <!-- Greetings -->
         <div class="group">
-          <p id="name">Greetings</p>
+          <p class="name" id="Greetings">Greetings</p>
           <div class="icons">
             <div id="grtg_1" onclick=iconPlay(this.id)>
               <img class="icon" src="images/greeting.png" alt="greeting">
@@ -51,7 +61,7 @@
         </div>
         <!-- British -->
         <div class="group">
-          <p id="name">British Sayings</p>
+          <p class="name"id="British">British</p>
           <div class="icons">
             <div id="brit_1" onclick=iconPlay(this.id)>
               <img class="icon" src="images/british.png" alt="British flag">
@@ -72,7 +82,7 @@
         </div>
         <!-- Compliments -->
         <div class="group">
-          <p id="name">Compliments</p>
+          <p class="name" id="Compliments">Compliments</p>
           <div class="icons">
             <div id="comp_1" onclick=iconPlay(this.id)>
               <img class="icon" src="images/compliment.png" alt="heart eyes">
@@ -93,7 +103,7 @@
         </div>
         <!-- Love -->
         <div class="group">
-          <p id="name">Love</p>
+          <p class="name" id="Love">Love</p>
           <div class="icons">
             <div id="love_1" onclick=iconPlay(this.id)>
               <img class="icon" src="images/love.png" alt="love heart">
@@ -112,12 +122,31 @@
             </div>
           </div>
         </div>
+        <!-- Northern -->
+        <div class="group">
+          <p class="name" id="Northern">Northern</p>
+          <div class="icons">
+            <div id="nrth_1" onclick=iconPlay(this.id)>
+              <img class="icon" src="images/north.png" alt="compass">
+            </div>
+            <div id="nrth_2" onclick=iconPlay(this.id)>
+              <img  class="icon" src="images/north.png" alt="compass">
+            </div>
+            <div id="nrth_3" onclick=iconPlay(this.id)>
+              <img  class="icon hide" src="images/north.png" alt="compass">
+            </div>
+            <div id="nrth_4" onclick=iconPlay(this.id)>
+              <img class="icon hide" src="images/north.png" alt="compass">
+            </div>
+            <div id="nrth_5" onclick=iconPlay(this.id)>
+              <img class="icon hide" src="images/north.png" alt="compass">
+            </div>
+          </div>
+        </div>
 
       </div>
 
     <!-- Script file -->
     <script src="bb.js" charset="utf-8"></script>
-
-    </div>
   </body>
 </html>
