@@ -12,12 +12,6 @@ font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
 
-#scrll {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 body {
   box-sizing: border-box;
   margin: 0;
@@ -146,6 +140,10 @@ hr {
   font-size: 16px;
   box-shadow: 0 2px var(--clr4);
 }
+#access > button:active {
+  box-shadow: 0 1px var(--clr4);
+	transform: translateY(2px);
+}
 
 #resp {
   box-sizing: inherit;
@@ -153,15 +151,9 @@ hr {
   height: 25px;
 }
 
-#access > button:active {
-  box-shadow: 0 1px var(--clr4);
-	transform: translateY(2px);
-}
-
 .contentain {
   box-sizing: inherit;
   width: 100%;
-  padding-top: 5px;
 }
 
 #instruction {
@@ -183,26 +175,79 @@ hr {
   font-weight: bold;
 }
 
-.choose {
+.contChoose {
+  box-sizing: inherit;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  position: sticky;
+  top: 110px;
+  border-bottom: 1px solid var(--clr4);
 }
 
-select > option {
+.choose {
+  box-sizing: inherit;
+  border: 1px solid var(--clr1);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 10% 65% 10% 15%;
+  justify-content: space;
+  align-items: center;
+}
 
+.gTxt {
+  box-sizing: inherit;
   text-align: center;
-  height: 15px;
+  font-family: 'Comfortaa', cursive;
+  color: var(--clr5);
+  font-size: 20px;
+  margin: auto;
+  transition: transform 0.2s;
+}
+.slide-l {
+  transform: translateX(-175%);
 }
 
-.dl {
+.slide-r {
+  transform: translateX(175%);
+}
+
+.arrow {
   display: block;
-  width: 140px;
-  margin: 15px 10px 15px auto;
-  height: 25px;
-  color: var(--clr5);
-  font-size: 16px;
-  border-radius: 5px;
-  border: 2px solid var(--clr4);
+  height: 95%;
+  margin: auto;
+}
+.arrow:active {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-tap-highlight-color: RGBA(0,0,0,0);
+}
+
+#groupGo {
+  box-sizing: inherit;
+  width: 40px;
+  height: 30px;
+  font-family: 'Comfortaa', cursive;
+  border: 2px solid var(--clr4);color: var(--clr5);
+  border-radius: 10px;
+  outline: none;
+  margin: auto;
+  text-align: center;
+  background-color: var(--clr3);
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px var(--clr4);
+}
+#groupGo:active {
+    box-shadow: 0 1px var(--clr4);
+  	transform: translateY(2px);
 }
 
 .group {
@@ -233,14 +278,13 @@ select > option {
   transition: -webkit-transform 0.2s;
   transition: -ms-transform 0.2s;
 }
-
-.hide {
-  visibility: hidden;
-}
-
 .icon:active {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-tap-highlight-color: RGBA(0,0,0,0);
+}
+
+.hide {
+  visibility: hidden;
 }

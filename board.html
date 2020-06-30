@@ -27,18 +27,21 @@
     <!-- Content -->
 
     <div class="contentain lg">
+
+      <!-- Group Selector -->
+
+      <div class="contChoose">
+        <div class="choose">
+          <img id="arrowL" src="images/arrowL.png" class="arrow" onclick=groupSlide(this.id)>
+          <p id="groupTxt" class="gTxt"></p>
+          <img id="arrowR" src="images/arrowR.png" class="arrow" onclick=groupSlide(this.id)>
+          <button type="button" name="groupGo" id="groupGo">GO</button>
+        </div>
+      </div>
+
       <p id="instruction">Use the icons below to hear your favourite phrases!</p>
       <hr>
-      <div class="choose">
-        <select id="groups" class="dl">
-          <option>Greetings</option>
-          <option>British</option>
-          <option>Compliments</option>
-          <option>Love</option>
-          <option>Northern</option>
-          <option>Mexican't</option>
-        </select>
-      </div>
+
       <!-- Greetings -->
       <div class="group">
         <p class="name" id="Greetings">Greetings</p>
