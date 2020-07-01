@@ -12,6 +12,14 @@ font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
 
+#test {
+  box-sizing: inherit;
+  margin: auto;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 200px;
+  color: var(--clr5);
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -46,6 +54,7 @@ hr {
   width: 100%;
   height: 110px;
   padding: 10px 0;
+  margin-bottom: 10px;
   background-color: var(--clr3);
   display: grid;
   grid-gap: 0;
@@ -172,34 +181,76 @@ hr {
   font-family: 'Comfortaa', cursive;
   color: var(--clr5);
   font-size: 16px;
-  margin: 5px auto 10px;
+  margin: 5px auto 5px;
   font-weight: bold;
 }
 
 .contChoose {
   box-sizing: inherit;
+  background-color: white;
   width: 100%;
   margin: auto;
-  padding-top: 10px;
   padding-bottom: 10px;
-  background-color: white;
   position: sticky;
-  top: 110px;
+  top: 108px;
   border-bottom: 1px solid var(--clr4);
 }
 
 .choose {
   box-sizing: inherit;
-  border: 1px solid var(--clr1);
-  border-radius: 10px;
+  border-top: 1px solid var(--clr1);
+  border-bottom: 1px solid var(--clr1);
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 95%;
+  width: 100%;
+  height: 40px;
   margin: auto;
   display: grid;
-  grid-template-columns: 10% 65% 10% 15%;
-  justify-content: space;
+  grid-template-columns: 2% 5% 47% 5% 2% 12% 12% 12% 2%;
+  justify-content: center;
   align-items: center;
+}
+
+.con {
+  box-sizing: inherit;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-height: 25px;
+  max-width: 25px;
+  margin: 1.5px auto;
+  text-align: center;
+
+}
+.con-img {
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.con-lb {
+  border-left: 2px solid var(--clr4);
+}
+.con-img-con {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+#reset {
+  background-image: url("images/reset.png");
+}
+#plus {
+  background-image: url("images/plus.png");
+}
+#minus {
+  background-image: url("images/minus.png");
+}
+
+.atop {
+  z-index: 5;
 }
 
 .gTxt {
@@ -207,30 +258,35 @@ hr {
   text-align: center;
   font-family: 'Comfortaa', cursive;
   color: var(--clr5);
-  font-size: 20px;
+  font-size: 18px;
   margin: auto;
-  transition: transform 0.25s;
+  min-width: 130px;
+  transition: transform 0.1s ease-in-out;
 }
+
 .slide-l {
-  transform: translateX(-175%);
-  -webkit-transform: translateX(-175%);
-  -ms-transform: translateX(-175%);
-  -moz-transform: translateX(-175%);
+  transform: translateX(-200px);
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
 }
 
 .slide-r {
-  transform: translateX(175%);
-  -webkit-transform: translateX(175%);
-  -ms-transform: translateX(175%);
-  -moz-transform: translateX(175%);
+  transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -moz-transform: translateX(200px);
 }
 
 .arrow {
   box-sizing: inherit;
+  background-color: white;
   display: block;
   height: 95%;
-  margin: auto;
-  max-height: 28.5px;
+  max-height: 25px;
+  max-width: 25px;
+  margin: 0;
+  width: 100%;
 }
 .arrow:active {
   transform: scale(1.1);
@@ -238,29 +294,6 @@ hr {
   -ms-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -webkit-tap-highlight-color: RGBA(0,0,0,0);
-}
-
-#groupGo {
-  box-sizing: inherit;
-  width: 40px;
-  height: 30px;
-  font-family: 'Comfortaa', cursive;
-  border: 2px solid var(--clr4);color: var(--clr5);
-  border-radius: 10px;
-  outline: none;
-  margin: auto;
-  text-align: center;
-  background-image: url("images/reset.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 2px var(--clr4);
-}
-#groupGo:active {
-    box-shadow: 0 1px var(--clr4);
-  	transform: translateY(2px);
 }
 
 .group {
@@ -279,6 +312,9 @@ hr {
   align-items: center;
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
+.icons-hide {
+  display: none;
+}
 
 .icon {
   display: inline-block;
@@ -292,9 +328,9 @@ hr {
   transition: -ms-transform 0.2s;
 }
 .icon:active {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
   -webkit-tap-highlight-color: RGBA(0,0,0,0);
 }
 

@@ -1,7 +1,5 @@
 const groupArr = ["Greetings", "British", "Compliments", "Love", "Northern", "Mexican't"];
 
-document.getElementById("groupTxt").innerHTML = groupArr[0];
-
 function access() {
   /*
   var user = document.getElementById("user-in");
@@ -23,81 +21,135 @@ function iconPlay(id) {
 function groupSlide(id) {
   var arrow = document.getElementById(id);
   var gTxt = document.getElementById("groupTxt");
-  var txt = gTxt.innerHTML, pos = groupArr.indexOf(txt), entries = groupArr.length - 1;
+  var cTxt = document.getElementById("cTxt");
+  var entries = groupArr.length - 1;
+  var ms = 100;
+
+  if (cTxt.innerHTML.length > 0) {var txt = cTxt.innerHTML;}
+
+  var pos = groupArr.indexOf(txt);
+
+  console.log(txt);
 
   switch (id) {
-    case "arrowL":
+    case "arrowR":
       switch (true) {
-        case pos == 0:
+        case pos >= 0 && pos < entries:
           gTxt.classList.add("slide-l");
           window.setTimeout(function(){
-            gTxt.innerHTML = "";
+            cTxt.innerHTML = "";
             gTxt.classList.remove("slide-l");
-          }, 75);
+          }, ms);
           window.setTimeout( function() {
             gTxt.classList.add("slide-r");
             window.setTimeout(function(){
+              cTxt.innerHTML = groupArr[pos + 1];
+              var txt = cTxt.innerHTML;
               gTxt.classList.remove("slide-r");
-              gTxt.innerHTML = groupArr[entries];
-            }, 75);
-          }, 175);
+              selectGroup(txt);
+            }, ms);
+          }, (1.1 * ms));
           break;
-        case pos > 0:
-        case pos <= entries:
+        case pos == entries:
           gTxt.classList.add("slide-l");
           window.setTimeout(function(){
-            gTxt.innerHTML = "";
+            cTxt.innerHTML = "";
             gTxt.classList.remove("slide-l");
-          }, 75);
+          }, ms);
           window.setTimeout( function() {
             gTxt.classList.add("slide-r");
             window.setTimeout(function(){
+              cTxt.innerHTML = groupArr[0];
+              var txt = cTxt.innerHTML;
               gTxt.classList.remove("slide-r");
-              gTxt.innerHTML = groupArr[pos - 1];
-            }, 75);
-          }, 175);
+              selectGroup(txt);
+            }, ms);
+          }, (1.1 * ms));
+          break;
+        case pos == -1:
+          gTxt.classList.add("slide-r");
+          window.setTimeout(function(){
+            cTxt.innerHTML = groupArr[0];
+            var txt = cTxt.innerHTML;
+            gTxt.classList.remove("slide-r");
+            selectGroup(txt);
+          }, ms);
           break;
       }
       break;
-    case "arrowR":
+    case "arrowL":
       switch (true) {
         case pos == entries:
           gTxt.classList.add("slide-r");
           window.setTimeout(function(){
-            gTxt.innerHTML = "";
+            cTxt.innerHTML = "";
             gTxt.classList.remove("slide-r");
-          }, 75);
+          }, ms);
           window.setTimeout( function() {
             gTxt.classList.add("slide-l");
             window.setTimeout(function(){
+              cTxt.innerHTML = groupArr[0];
+              var txt = cTxt.innerHTML;
               gTxt.classList.remove("slide-l");
-              gTxt.innerHTML = groupArr[0];
-            }, 75);
-          }, 175);
+              selectGroup(txt);
+            }, ms);
+          }, (1.1 * ms));
           break;
-        case pos < entries:
-        case pos >= 0:
+        case pos < entries && pos >= 0:
           gTxt.classList.add("slide-r");
           window.setTimeout(function(){
-            gTxt.innerHTML = "";
+            cTxt.innerHTML = "";
             gTxt.classList.remove("slide-r");
-          }, 75);
+          }, ms);
           window.setTimeout( function() {
             gTxt.classList.add("slide-l");
             window.setTimeout(function(){
+              cTxt.innerHTML = groupArr[pos - 1];
+              var txt = cTxt.innerHTML;
               gTxt.classList.remove("slide-l");
-              gTxt.innerHTML = groupArr[pos + 1];
-            }, 75);
-          }, 175);
+              selectGroup(txt);
+            }, ms);
+          }, (2 * ms));
+          break;
+        case pos == -1:
+          gTxt.classList.add("slide-l");
+          window.setTimeout(function(){
+            cTxt.innerHTML = groupArr[entries];
+            var txt = cTxt.innerHTML;
+            gTxt.classList.remove("slide-l");
+            selectGroup(txt);
+          }, ms);
           break;
       }
       break;
   }
 }
 
-function moveToId() {
+function closeGroups() {
+  var iconsGroups = document.querySelectorAll("div.icons");
+  var iconGroups = document.querySelectorAll("div.icon");
+  iconsGroups.forEach(element => element.classList.add("icons-hide"));
+  iconGroups.forEach(element => element.classList.add("icons-hide"));
+}
+
+function openGroups() {
+  var iconsGroups = document.querySelectorAll("div.icons");
+  var iconGroups = document.querySelectorAll("div.icon");
+  iconsGroups.forEach(element => element.classList.remove("icons-hide"));
+  iconGroups.forEach(element => element.classList.remove("icon-hide"));
+}
+
+function resetGroups() {
   var gTxt = document.getElementById("groupTxt");
-  txt = gTxt.innerHTML;
-  var group = document.getElementById(txt);
-  group.scrollIntoView();
+  cTxt.innerHTML = "";
+  openGroups();
+}
+
+function selectGroup(txt) {
+  closeGroups();
+
+  var grp = document.getElementById(txt);
+  var iShow = grp.querySelector("div.icons");
+
+  iShow.classList.remove("icons-hide");
 }

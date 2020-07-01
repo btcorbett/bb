@@ -32,10 +32,23 @@
 
       <div class="contChoose">
         <div class="choose">
-          <img id="arrowL" src="images/arrowL.png" class="arrow" onclick=groupSlide(this.id)>
-          <p id="groupTxt" class="gTxt"></p>
-          <img id="arrowR" src="images/arrowR.png" class="arrow" onclick=groupSlide(this.id)>
-          <button type="button" name="groupGo" id="groupGo"1></button>
+          <section class="con atop"></section>
+          <img id="arrowL" src="images/arrowL.png" class="arrow atop" onclick=groupSlide(this.id)>
+          <p id="groupTxt" class="gTxt">
+            <span id="cTxt"></span>
+          </p>
+          <img id="arrowR" src="images/arrowR.png" class="arrow atop" onclick=groupSlide(this.id)>
+          <section class="con atop"></section>
+          <div class="con-img-con con-lb atop">
+            <section id="reset" class="con con-img atop" onclick=resetGroups()></section>
+          </div>
+          <div class="con-img-con con-lb atop">
+            <section id="plus" class="con con-img atop" onclick=openGroups()></section>
+          </div>
+          <div class="con-img-con con-lb atop">
+            <section id="minus" class="con con-img atop" onclick=closeGroups()></section>
+          </div>
+          <section class="con con-lb atop"></section>
         </div>
       </div>
 
@@ -43,8 +56,8 @@
       <hr>
 
       <!-- Greetings -->
-      <div class="group">
-        <p class="name" id="Greetings">Greetings</p>
+      <div class="group" id="Greetings">
+        <p class="name">Greetings</p>
         <div class="icons">
           <div id="grtg_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/greeting.png" alt="greeting">
@@ -64,8 +77,8 @@
         </div>
       </div>
       <!-- British -->
-      <div class="group">
-        <p class="name"id="British">British</p>
+      <div class="group" id="British">
+        <p class="name">British</p>
         <div class="icons">
           <div id="brit_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/british.png" alt="British flag">
@@ -85,8 +98,8 @@
         </div>
       </div>
       <!-- Compliments -->
-      <div class="group">
-        <p class="name" id="Compliments">Compliments</p>
+      <div class="group" id="Compliments">
+        <p class="name">Compliments</p>
         <div class="icons">
           <div id="comp_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/compliment.png" alt="heart eyes">
@@ -106,8 +119,8 @@
         </div>
       </div>
       <!-- Love -->
-      <div class="group">
-        <p class="name" id="Love">Love</p>
+      <div class="group" id="Love">
+        <p class="name">Love</p>
         <div class="icons">
           <div id="love_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/love.png" alt="love heart">
@@ -127,8 +140,8 @@
         </div>
       </div>
       <!-- Northern -->
-      <div class="group">
-        <p class="name" id="Northern">Northern</p>
+      <div class="group" id="Northern">
+        <p class="name">Northern</p>
         <div class="icons">
           <div id="nrth_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/north.png" alt="compass">
@@ -148,8 +161,8 @@
         </div>
       </div>
       <!-- Mexican't -->
-      <div class="group">
-        <p class="name" id="Mexico">Mexican't</p>
+      <div class="group" id="Mexican't">
+        <p class="name">Mexican't</p>
         <div class="icons">
           <div id="mexi_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/mexico.png" alt="mexico">
