@@ -24,15 +24,21 @@
       <p></p>
     </div>
 
+    <div class="pg-split lg"></div>
+
     <!-- Content -->
 
-    <div id="access">
-        <label for="user">Username</label>
-        <input disabled id="user-in" type="text" name="user" maxlength=10 required>
-        <label for="pass">Password</label>
-        <input disabled id="pass-in" type="password" name="pass" maxlength=8 required>
-        <button name="login" onclick="access()" on>Login</button>
-        <span id="resp"></span>
+    <div class="contentain lg">
+
+      <div id="access">
+          <label for="user">Username</label>
+          <input id="user-in" class="access_input" type="text" name="user" maxlength=10 required onfocus=access_restart(this.id)>
+          <label for="pass">Password</label>
+          <input id="pass-in"  class="access_input" type="password" name="pass" maxlength=8 pattern="[0-9]*" required onfocus=access_restart(this.id)>
+          <button name="login" onclick="access()" on>Login</button>
+          <span id="resp"></span>
+      </div>
+
     </div>
 
     <script src="bb.js" charset="utf-8"></script>

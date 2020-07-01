@@ -24,6 +24,8 @@
       <p></p>
     </div>
 
+    <div class="pg-split lg"></div>
+
     <!-- Content -->
 
     <div class="contentain lg">
@@ -46,7 +48,7 @@
             <section id="plus" class="con con-img atop" onclick=openGroups()></section>
           </div>
           <div class="con-img-con con-lb atop">
-            <section id="minus" class="con con-img atop" onclick=closeGroups()></section>
+            <section id="minus" class="con con-img atop" disabled onclick=closeGroups()></section>
           </div>
           <section class="con con-lb atop"></section>
         </div>
@@ -55,24 +57,24 @@
       <p id="instruction">Use the icons below to hear your favourite phrases!</p>
       <hr>
 
-      <!-- Greetings -->
-      <div class="group" id="Greetings">
-        <p class="name">Greetings</p>
+      <!-- Morning -->
+      <div class="group" id="Morning">
+        <p class="name">Morning</p>
         <div class="icons">
-          <div id="grtg_1" onclick=iconPlay(this.id)>
-            <img class="icon" src="images/greeting.png" alt="greeting">
+          <div id="morn_1" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/morning.png" alt="morning">
           </div>
-          <div id="grtg_2" onclick=iconPlay(this.id)>
-            <img  class="icon" src="images/greeting.png" alt="greeting">
+          <div id="morn_2" onclick=iconPlay(this.id)>
+            <img  class="icon" src="images/morning.png" alt="morning">
           </div>
-          <div id="grtg_3" onclick=iconPlay(this.id)>
-            <img  class="icon hide" src="images/greeting.png" alt="greeting">
+          <div id="morn_3" onclick=iconPlay(this.id)>
+            <img  class="icon hide" src="images/morning.png" alt="morning">
           </div>
-          <div id="grtg_4" onclick=iconPlay(this.id)>
-            <img class="icon hide" src="images/greeting.png" alt="greeting">
+          <div id="morn_4" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/morning.png" alt="morning">
           </div>
-          <div id="grtg_5" onclick=iconPlay(this.id)>
-            <img class="icon hide" src="images/greeting.png" alt="greeting">
+          <div id="morn_5" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/morning.png" alt="morning">
           </div>
         </div>
       </div>
@@ -178,6 +180,90 @@
           </div>
           <div id="mexi_5" onclick=iconPlay(this.id)>
             <img class="icon hide" src="images/mexico.png" alt="mexico">
+          </div>
+        </div>
+      </div>
+      <!-- Facts -->
+      <div class="group" id="Facts">
+        <p class="name">Facts</p>
+        <div class="icons">
+          <div id="love_1" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/fact.png" alt="fact">
+          </div>
+          <div id="love_2" onclick=iconPlay(this.id)>
+            <img  class="icon" src="images/fact.png" alt="fact">
+          </div>
+          <div id="love_3" onclick=iconPlay(this.id)>
+            <img  class="icon hide" src="images/fact.png" alt="fact">
+          </div>
+          <div id="love_4" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/fact.png" alt="fact">
+          </div>
+          <div id="love_5" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/fact.png" alt="fact">
+          </div>
+        </div>
+      </div>
+      <!-- Jokes -->
+      <div class="group" id="Jokes">
+        <p class="name">Jokes</p>
+        <div class="icons">
+          <div id="joke_1" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/joke.png" alt="joke">
+          </div>
+          <div id="joke_2" onclick=iconPlay(this.id)>
+            <img  class="icon" src="images/joke.png" alt="joke">
+          </div>
+          <div id="joke_3" onclick=iconPlay(this.id)>
+            <img  class="icon hide" src="images/joke.png" alt="joke">
+          </div>
+          <div id="joke_4" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/joke.png" alt="joke">
+          </div>
+          <div id="joke_5" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/joke.png" alt="joke">
+          </div>
+        </div>
+      </div>
+      <!-- Encouragement -->
+      <div class="group" id="Encouragement">
+        <p class="name">Encouragement</p>
+        <div class="icons">
+          <div id="ecrg_1" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/thumb.png" alt="thumb">
+          </div>
+          <div id="ecrg_2" onclick=iconPlay(this.id)>
+            <img  class="icon" src="images/thumb.png" alt="thumb">
+          </div>
+          <div id="ecrg_3" onclick=iconPlay(this.id)>
+            <img  class="icon hide" src="images/thumb.png" alt="thumb">
+          </div>
+          <div id="ecrg_4" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/thumb.png" alt="thumb">
+          </div>
+          <div id="ecrg_5" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/thumb.png" alt="thumb">
+          </div>
+        </div>
+      </div>
+      <!-- Bedtime -->
+      <div class="group" id="Bedtime">
+        <p class="name">Bedtime</p>
+        <div class="icons">
+          <div id="bedt_1" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/bedtime.png" alt="bedtime">
+          </div>
+          <div id="bedt_2" onclick=iconPlay(this.id)>
+            <img  class="icon" src="images/bedtime.png" alt="bedtime">
+          </div>
+          <div id="bedt_3" onclick=iconPlay(this.id)>
+            <img  class="icon hide" src="bedtime/bedtime.png" alt="bedtime">
+          </div>
+          <div id="bedt_4" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/bedtime.png" alt="bedtime">
+          </div>
+          <div id="bedt_5" onclick=iconPlay(this.id)>
+            <img class="icon hide" src="images/bedtime.png" alt="bedtime">
           </div>
         </div>
       </div>
