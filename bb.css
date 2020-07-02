@@ -70,6 +70,7 @@ hr {
   max-height: 120px;
   margin: auto;
   border-radius: 50%;
+  transition: height 2s ease-in-out;
 }
 
 @media (max-width: 374px) {
@@ -199,6 +200,7 @@ hr {
   font-size: 16px;
   margin: 5px auto 5px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .contChoose {
@@ -244,6 +246,7 @@ hr {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 .con-img:active {
   transform: scale(1.1);
@@ -307,7 +310,6 @@ hr {
   display: block;
   height: 95%;
   max-height: 25px;
-  max-width: 25px;
   margin: 0;
   width: 100%;
 }
@@ -346,6 +348,7 @@ hr {
   vertical-align: middle;
   margin: 5px 12.5%;
   width: 75%;
+  border-radius: 10%;
   transition: transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: -ms-transform 0.2s;

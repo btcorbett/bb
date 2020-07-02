@@ -138,7 +138,7 @@ function groupSlide(id) {
   }
 }
 
-function closeGroups() {
+function closeIcons() {
   var iconsGroups = document.querySelectorAll("div.icons");
   var iconGroups = document.querySelectorAll("div.icon");
   iconsGroups.forEach(element => element.classList.add("icons-hide"));
@@ -147,7 +147,7 @@ function closeGroups() {
   document.getElementById("plus").classList.remove("hide");
 }
 
-function openGroups() {
+function openIcons() {
   var iconsGroups = document.querySelectorAll("div.icons");
   var iconGroups = document.querySelectorAll("div.icon");
   iconsGroups.forEach(element => element.classList.remove("icons-hide"));
@@ -156,20 +156,38 @@ function openGroups() {
   document.getElementById("minus").classList.remove("hide");
 }
 
+function openGroups() {
+  var groups = document.querySelectorAll("div.group");
+  groups.forEach(element => element.classList.remove("icons-hide"));
+}
+
+function ocGroup(p) {
+  var parentDiv = p.parentNode;
+  var kid = parentDiv.querySelectorAll("div.icons");
+  var iconsDiv = kid[0];
+
+  iconsDiv.classList.toggle("icons-hide");
+}
+
 function resetGroups() {
   var gTxt = document.getElementById("groupTxt");
   cTxt.innerHTML = "";
+  openIcons();
   openGroups();
 }
 
 function selectGroup(txt) {
-  closeGroups();
-
-  document.getElementById("plus").classList.add("hide");
-  document.getElementById("minus").classList.add("hide");
-
   var grp = document.getElementById(txt);
-  var iShow = grp.querySelector("div.icons");
+  var con = document.getElementById("contain");
 
-  iShow.classList.remove("icons-hide");
+  var grps = document.querySelectorAll("div.group");
+
+  for (i = 0; i < grps.length; i++) {
+    var grp = grps[i];
+    if (grp.id != txt ) {
+      grp.classList.add("icons-hide");
+    } else {
+      grp.classList.remove("icons-hide");
+    }
+  }
 }

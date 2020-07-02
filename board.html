@@ -17,7 +17,7 @@
 
     <div id="title" class="title lg">
       <p></p>
-      <img class="benny" src="images/benny.png" alt="Benny">
+      <img class="benny" src="images/benny.png" alt="Benny" onclick=minimise(this)>
       <div class="title-txt">
         The Benny Board!
       </div>
@@ -28,7 +28,7 @@
 
     <!-- Content -->
 
-    <div class="contentain lg">
+    <div id="contain" class="contentain lg">
 
       <!-- Group Selector -->
 
@@ -45,10 +45,10 @@
             <section id="reset" class="con con-img atop" onclick=resetGroups()></section>
           </div>
           <div class="con-img-con con-lb atop">
-            <section id="plus" class="con con-img atop" onclick=openGroups()></section>
+            <section id="plus" class="con con-img atop" onclick=openIcons()></section>
           </div>
           <div class="con-img-con con-lb atop">
-            <section id="minus" class="con con-img atop" disabled onclick=closeGroups()></section>
+            <section id="minus" class="con con-img atop" disabled onclick=closeIcons()></section>
           </div>
           <section class="con con-lb atop"></section>
         </div>
@@ -59,7 +59,7 @@
 
       <!-- Morning -->
       <div class="group" id="Morning">
-        <p class="name">Morning</p>
+        <p class="name" onclick=ocGroup(this)>Morning</p>
         <div class="icons">
           <div id="morn_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/morning.png" alt="morning">
@@ -68,10 +68,10 @@
             <img  class="icon" src="images/morning.png" alt="morning">
           </div>
           <div id="morn_3" onclick=iconPlay(this.id)>
-            <img  class="icon hide" src="images/morning.png" alt="morning">
+            <img  class="icon" src="images/morning.png" alt="morning">
           </div>
           <div id="morn_4" onclick=iconPlay(this.id)>
-            <img class="icon hide" src="images/morning.png" alt="morning">
+            <img class="icon" src="images/morning.png" alt="morning">
           </div>
           <div id="morn_5" onclick=iconPlay(this.id)>
             <img class="icon hide" src="images/morning.png" alt="morning">
@@ -80,7 +80,7 @@
       </div>
       <!-- British -->
       <div class="group" id="British">
-        <p class="name">British</p>
+        <p class="name" onclick=ocGroup(this)>British</p>
         <div class="icons">
           <div id="brit_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/british.png" alt="British flag">
@@ -89,19 +89,22 @@
             <img  class="icon" src="images/british.png" alt="British flag">
           </div>
           <div id="brit_3" onclick=iconPlay(this.id)>
-            <img  class="icon hide" src="images/british.png" alt="British flag">
+            <img  class="icon" src="images/british.png" alt="British flag">
           </div>
           <div id="brit_4" onclick=iconPlay(this.id)>
-            <img class="icon hide" src="images/british.png" alt="British flag">
+            <img class="icon" src="images/british.png" alt="British flag">
           </div>
           <div id="brit_5" onclick=iconPlay(this.id)>
-            <img class="icon hide" src="images/british.png" alt="British flag">
+            <img class="icon" src="images/british.png" alt="British flag">
+          </div>
+          <div id="brit_6" onclick=iconPlay(this.id)>
+            <img class="icon" src="images/british.png" alt="British flag">
           </div>
         </div>
       </div>
       <!-- Compliments -->
       <div class="group" id="Compliments">
-        <p class="name">Compliments</p>
+        <p class="name" onclick=ocGroup(this)>Compliments</p>
         <div class="icons">
           <div id="comp_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/compliment.png" alt="heart eyes">
@@ -122,7 +125,7 @@
       </div>
       <!-- Love -->
       <div class="group" id="Love">
-        <p class="name">Love</p>
+        <p class="name" onclick=ocGroup(this)>Love</p>
         <div class="icons">
           <div id="love_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/love.png" alt="love heart">
@@ -143,7 +146,7 @@
       </div>
       <!-- Northern -->
       <div class="group" id="Northern">
-        <p class="name">Northern</p>
+        <p class="name" onclick=ocGroup(this)>Northern</p>
         <div class="icons">
           <div id="nrth_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/north.png" alt="compass">
@@ -164,7 +167,7 @@
       </div>
       <!-- Mexican't -->
       <div class="group" id="Mexican't">
-        <p class="name">Mexican't</p>
+        <p class="name" onclick=ocGroup(this)>Mexican't</p>
         <div class="icons">
           <div id="mexi_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/mexico.png" alt="mexico">
@@ -185,28 +188,28 @@
       </div>
       <!-- Facts -->
       <div class="group" id="Facts">
-        <p class="name">Facts</p>
+        <p class="name" onclick=ocGroup(this)>Facts</p>
         <div class="icons">
-          <div id="love_1" onclick=iconPlay(this.id)>
+          <div id="fact_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/fact.png" alt="fact">
           </div>
-          <div id="love_2" onclick=iconPlay(this.id)>
+          <div id="fact_2" onclick=iconPlay(this.id)>
             <img  class="icon" src="images/fact.png" alt="fact">
           </div>
-          <div id="love_3" onclick=iconPlay(this.id)>
+          <div id="fact_3" onclick=iconPlay(this.id)>
             <img  class="icon hide" src="images/fact.png" alt="fact">
           </div>
-          <div id="love_4" onclick=iconPlay(this.id)>
+          <div id="fact_4" onclick=iconPlay(this.id)>
             <img class="icon hide" src="images/fact.png" alt="fact">
           </div>
-          <div id="love_5" onclick=iconPlay(this.id)>
+          <div id="fact_5" onclick=iconPlay(this.id)>
             <img class="icon hide" src="images/fact.png" alt="fact">
           </div>
         </div>
       </div>
       <!-- Jokes -->
       <div class="group" id="Jokes">
-        <p class="name">Jokes</p>
+        <p class="name" onclick=ocGroup(this)>Jokes</p>
         <div class="icons">
           <div id="joke_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/joke.png" alt="joke">
@@ -227,7 +230,7 @@
       </div>
       <!-- Encouragement -->
       <div class="group" id="Encouragement">
-        <p class="name">Encouragement</p>
+        <p class="name" onclick=ocGroup(this)>Encouragement</p>
         <div class="icons">
           <div id="ecrg_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/thumb.png" alt="thumb">
@@ -248,7 +251,7 @@
       </div>
       <!-- Bedtime -->
       <div class="group" id="Bedtime">
-        <p class="name">Bedtime</p>
+        <p class="name" onclick=ocGroup(this)>Bedtime</p>
         <div class="icons">
           <div id="bedt_1" onclick=iconPlay(this.id)>
             <img class="icon" src="images/bedtime.png" alt="bedtime">
@@ -257,7 +260,7 @@
             <img  class="icon" src="images/bedtime.png" alt="bedtime">
           </div>
           <div id="bedt_3" onclick=iconPlay(this.id)>
-            <img  class="icon hide" src="bedtime/bedtime.png" alt="bedtime">
+            <img  class="icon hide" src="images/bedtime.png" alt="bedtime">
           </div>
           <div id="bedt_4" onclick=iconPlay(this.id)>
             <img class="icon hide" src="images/bedtime.png" alt="bedtime">
